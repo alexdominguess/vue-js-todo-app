@@ -116,11 +116,11 @@ export default {
           this.tasks[index].completed =  !aStatus        
         },
 
-        addTasks(teste){
-            if(!teste){
+        addTasks(newTask){
+            if(!newTask){
               alert('Campo Tarefa não pode ser vazio!')
             }else{
-              this.tasks.push({title:teste, completed:false})
+              this.tasks.push({title:newTask, completed:false})
               localStorage.setItem('tasks', JSON.stringify(this.tasks))
             }
             
