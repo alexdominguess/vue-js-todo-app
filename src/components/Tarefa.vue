@@ -27,7 +27,7 @@
                     <v-icon left>mdi-pencil-outline</v-icon>
                     <v-list-item-title>Editar</v-list-item-title>
                   </v-list-item>
-                  <v-list-item   >
+                  <v-list-item   @click="deleteTask(index)">
                     <v-icon left>mdi-trash-can-outline</v-icon>
                     <v-list-item-title>Excluir</v-list-item-title>
                   </v-list-item>
@@ -107,13 +107,10 @@ export default {
         },
 
         deleteTask(index){
-          var aStatus
           console.log('delete1 - ',index ,this.tasks)
           this.tasks.splice(index, 1)
           console.log('delete2 - ',this.tasks)
           localStorage.setItem('tasks', JSON.stringify(this.tasks))
-          aStatus = this.tasks[index].completed
-          this.tasks[index].completed =  !aStatus        
         },
 
         addTasks(newTask){
