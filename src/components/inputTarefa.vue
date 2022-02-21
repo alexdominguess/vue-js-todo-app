@@ -1,33 +1,33 @@
 <template>
-  <div class="input-field">
-    <v-text-field
-      v-model="inputValue"
-      label="Entre uma tarefa"
-      outlined
-      dense
-      append-outer-icon="mdi-plus-circle-outline "
-      @click:append-outer = "$emit('inputEnter', inputValue); clearInput()" 
-      @keyup.enter="$emit('inputEnter', inputValue); clearInput()"
-      color = "light-blue lighten-1"
-    >              
-    </v-text-field>
+  <div style="display:flex; align-items: center; justify-content: center; margin: -30px; padding: 50px 20px 0px 20px">
+    <v-col cols="12" >
+        <v-text-field 
+            class="mx-8"
+            v-model="newTask"
+            label="Nova tarefa"
+            outlined
+            clearable
+            append-outer-icon="mdi-plus-circle-outline"
+            @click:append-outer="$emit('newTask', newTask), newTask=''"
+            @keyup.enter="$emit('newTask', newTask), newTask=''"
+        ></v-text-field>        
+    </v-col>
   </div>
 </template>
 
 <script>
-export default {
-    propos:['inputValue'],
-    data: () => ({
-        inputValue:""
-    }),
-    methods:{
-        clearInput(){
-            this.inputValue = ""
-        }
-    }
-    }
+  export default {
+    data () {
+      return {
+        newTask: '',
+      }
+    },
+  }
 </script>
 
 <style>
-
+ .v-input__icon.v-input__icon--append-outer button {
+  font-size: 35px;
+  color: rgb(153, 153, 153);
+  }
 </style>

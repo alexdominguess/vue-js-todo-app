@@ -1,19 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import Tarefas from '../views/Tarefas.vue'
+import Tasks from '../views/TasksView.vue'
 import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        name: 'Tarefas',
-        component: Tarefas
+        name: 'Tasks',
+        component: Tasks
     },
     {
-        path: '/sobre',
-        name: 'Sobre',
+        path: '/about',
+        name: 'About',
         component: About
     }
 ]
