@@ -13,7 +13,8 @@
 </template>
 
 <script>
-  import InputTarefa from '../components/InputTarefa.vue'
+
+  import InputTarefa from '../components/inputTarefa.vue'
   import Task from '../components/Task.vue'
   export default {
     components: { Task, InputTarefa },
