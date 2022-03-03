@@ -14,14 +14,22 @@
                     </router-link>
                 </v-list-item>
 
-
                 <v-list-item>
                     <router-link to="/about" style="text-decoration: none; color: rgb(71, 71, 71); width:100%">
                         <v-list-item-icon>
                             <v-icon>mdi-information-outline</v-icon>
                         </v-list-item-icon>
-                        Sobre
+                        Sobre o App
                     </router-link>
+                </v-list-item>
+
+                <v-list-item>
+                    <a href="https://alexdominguess.github.io/" target="blank" style="text-decoration: none; color: rgb(71, 71, 71); width:100%">
+                        <v-list-item-icon>
+                            <v-icon>mdi-account-circle-outline</v-icon>
+                        </v-list-item-icon>
+                        Sobre mim
+                    </a>
                 </v-list-item>
 
             </v-list-item-group>
