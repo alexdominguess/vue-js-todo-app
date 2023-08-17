@@ -1,5 +1,7 @@
 # todo
 
+You can see this app running here - https://alex-todo-app.netlify.app/
+
 ## Project setup
 ```
 npm install
